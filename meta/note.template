@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Style-Type" content="text/css" />
-    <meta name="author" content="district10" />
+    <meta name="author" content="cxumol" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
@@ -21,10 +21,6 @@ $endif$
 -->
 </head>
 <body class="markdown-body">
-<a href="https://github.com/district10/notes">
-    <img
-        style="position: absolute; top: 0; right: 0; border: 0; width: 149px; height: 149px;"
-        src="$rootdir$fork-me-on-github.png" alt="Fork me on GitHub"></a>
 <div id="navigator"><a id="gotoindex" href="$if(ISINDEX)$../$endif$index.html" title="【回到笔记索引 | Back to Index】">☣</a>
 </div>
 <span id="help">按下 "h" 获取页面帮助。</span>

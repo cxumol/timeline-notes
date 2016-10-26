@@ -70,11 +70,6 @@ publish/%: meta/%
 note: n
 n:
 	$(EDITOR) -p \
-		lang/algo.md \
-		lang/c-cpp.md \
-		lang/sys-net-misc.md \
-		2016/job.md \
-		2016/note2.md \
 		index.md
 m:
 	$(EDITOR) Makefile
