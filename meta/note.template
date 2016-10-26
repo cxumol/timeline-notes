@@ -31,5 +31,6 @@ $body$
 <script src="$rootdir$egg.min.js"></script>
 <script src="$rootdir$clipboard.min.js"></script>
 <script src="$rootdir$notes.js"></script>
+<div class="site-footer">Modified based on <a href="//tangzx.qiniudn.com/notes">txz's note</a></div>
 </body>
 </html>
