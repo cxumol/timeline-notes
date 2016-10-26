@@ -83,7 +83,7 @@ sm: sitemap
 sitemap:
 	touch publish/sitemap.html
 	find publish/ | \
-		#sed -e "s/^publish/-   <http:\/\/tangzx.qiniudn.com\/notes/" | \#
+		sed -e "s/^publish/-   </" | \
 		sed -e "s/$$/>/" | tee sitemap.md | \
 		pandoc --ascii -o publish/sitemap.html
 	cat sitemap.md
