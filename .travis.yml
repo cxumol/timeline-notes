@@ -26,7 +26,7 @@ script:
   - cat meta/conf.json.in | sed -e "s/QiNiuAK/$QiNiuAK/" | sed -e "s/QiNiuSK/$QiNiuSK/" > conf.json
   - qrsync conf.json
   - cd publish
-  - # git init; git add -A; git commit -m "publish2coding:coding-pages, lazy me @ `date`"
+  - git init; git add -A; git commit -m "publish2coding:coding-pages, lazy me @ `date`"
   - git remote add origin2 git@git.coding.net:cxumol/note.timeline.git
   - git push -u origin2 HEAD:coding-pages --force
   - cd ..; rm -Rf publish; git reset --hard HEAD;
