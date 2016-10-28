@@ -10,8 +10,8 @@ CSS:=publish/github-markdown.css \
      publish/egg.min.js \
 	 publish/clipboard.min.js \
      publish/notes.js \
-     publish/notes.css \
-     publish/fork-me-on-github.png \
+     publish/notes.css 
+#     publish/fork-me-on-github.png \
 
 FROM := markdown+abbreviations
 ifeq (,$(DUMB))
