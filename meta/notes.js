@@ -1,9 +1,11 @@
 $( "a[href^='http://']" ).attr( "target", "_blank" );
 $( "a[href^='https://']" ).attr( "target", "_blank" );
 $( "a[href^='#']" ).attr( "target", "" );
-$( "a[href*='tangzhixiong.com']" ).attr( "target", "" );
+//$( "a[href*='tangzhixiong.com']" ).attr( "target", "" );
 
 $('a').on('click', function(event){ event.stopPropagation(); });
+
+$("p:contains('refs and see also')").addClass('refs');
 
 $('img').each(function(index){
     var src = $(this).attr('src');
@@ -26,6 +28,7 @@ $('a.hide').each(function(){
     }
 });
 
+// install
 $('dt > code.fold').each(function(){
     $(this)
         .parent().addClass('drawerClose').addClass('drawer')
@@ -35,35 +38,7 @@ $('dt > code.foldable').each(function(){
     $(this)
         .parent().addClass('drawerOpen').addClass('drawer');
 });
-$('li > code.fold').each(function(){
-    $(this)
-        .parent().addClass('drawerClose').addClass('drawer').end()
-        .next('ul,ol').addClass('drawerHide');
-});
-$('li > code.foldable').each(function(){
-    $(this)
-        .parent().addClass('drawerOpen').addClass('drawer')
-});
-$('p > code.fold').each(function(){
-    $(this)
-        .parent().addClass('simpledrawerClose').addClass('simpledrawer')
-        .next('ul,ol').addClass('simpledrawerHide');
-});
-$('p > code.foldable').each(function(){
-    $(this)
-        .parent().addClass('simpledrawerOpen').addClass('simpledrawer');
-});
-$('p > code.fold-ng').each(function(){
-    $(this)
-        .parent().addClass('drawer-ng-this').addClass('drawer-ng-close')
-        .siblings().addClass('drawer-ng-siblings').addClass('drawer-ng-hide');
-});
-$('p > code.foldable-ng').each(function(){
-    $(this)
-        .parent().addClass('drawer-ng-this').addClass('drawer-ng-open')
-        .siblings().addClass('drawer-ng-siblings');
-});
-
+// take effect when click
 $('dt.drawer').on('click', function(event){
     if(getSelection().toString()){ return; }
     if($('body').hasClass('locked')){ return; }
@@ -76,6 +51,7 @@ $('dt.drawer').on('click', function(event){
     event.stopPropagation();
 });
 $('dd').on('click', function(event){
+    if ($(event.target).hasClass("copyme")) { return; }
     if(getSelection().toString()){ return; }
     if($('body').hasClass('locked')){ return; }
     var $dt = $(this).prev('dt');
@@ -300,3 +276,7 @@ new Clipboard('.copyme');
 // $('.copyme').on('click', function(event){ event.stopPropagation(); });
 
 // $('*').on('click', function(event){ console.log(event.target(); }); '<button class="btn" data-clipboard-snippet=""><img class="clippy" src="https://clipboardjs.com/assets/images/clippy.svg" alt="Copy to clipboard" width="13"></button>'
+
+$('.key').on('click', function(event){
+    show();
+});
