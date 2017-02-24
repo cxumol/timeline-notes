@@ -2,13 +2,13 @@
 
 SRC:=$(wildcard index.md */*.md)
 DST:=$(addprefix publish/, $(SRC:%.md=%.html))
-CSS:=publish/github-markdown.css \
+CSS:=//cdn.staticfile.org/github-markdown-css/2.4.1/github-markdown.min.css \
      publish/highlight.css \
-     publish/lazyload.min.js \
-     publish/jquery-3.0.0.min.js \
+     //cdn.staticfile.org/lazyloadjs/3.2.2/lazyload.min.js \
+     //cdn.staticfile.org/jquery/3.0.0/jquery.min.js \
 	 publish/jquery.idTabs.min.js \
      publish/egg.min.js \
-	 publish/clipboard.min.js \
+	 //cdn.staticfile.org/clipboard.js/1.5.16/clipboard.min.js \
      publish/notes.js \
      publish/notes.css 
 #     publish/fork-me-on-github.png \
